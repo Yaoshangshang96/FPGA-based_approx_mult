@@ -1,0 +1,11 @@
+clear all
+close all
+imdata = imread('C:\workspace\...\kiel.bmp');
+imdata = uint8((imdata));
+whos imdata
+imshow(imdata);
+BinSer=dec2hex(imdata,2); BinSer=BinSer';
+FileName=[num2str(size(imdata,1)),'_',num2str(size(imdata,2)),'_',num2str(size(imdata,3)),'_','.txt']
+fid=fopen(FileName,'w');
+fprintf(fid,'%c%c ',BinSer(:));
+fclose(fid);

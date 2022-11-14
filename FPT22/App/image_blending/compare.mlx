@@ -1,0 +1,5 @@
+format long g
+imdata0 = imread('C:\workspace\...\result_baseline.png');
+imdata1 = imread('C:\workspace\...\result.png');
+peaksnr = psnr(imdata0,imdata1)
+ssim_value = ssim(imdata0,imdata1)

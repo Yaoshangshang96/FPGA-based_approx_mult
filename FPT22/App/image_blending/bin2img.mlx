@@ -1,0 +1,10 @@
+FileName='512_512_1.txt'; 
+mn=sscanf(FileName,'%d_%d_%d');
+M=mn(1); N=mn(2); K=mn(3);
+fid=fopen('C:\workspace\...\bin.txt','r');
+data=fscanf(fid,'%c%c%c%c ');
+fclose(fid);
+data1=reshape(data,4,length(data)/4);
+data2=reshape(hex2dec(data1'),M,N,K);
+imshow(uint16(data2));
+imwrite(uint16(data2),'C:\workspace\...\result.png');
