@@ -8,9 +8,9 @@ wire [7:0]prod2;
 wire [7:0]prod3;
 wire [7:0]prod4;
 
-LM-NC M0(.A(A[3:0]),.B(B[3:0]),.R(prod1));
-LM-NC M1(.A(A[3:0]),.B(B[7:4]),.R(prod2));
-LM-2 M2(.A(A[7:4]),.B(B[3:0]),.R(prod3));
-LM-1 M3(.A(A[7:4]),.B(B[7:4]),.R(prod4));
+LM_NC M0(.A(A[3:0]),.B(B[3:0]),.R(prod1));
+LM_NC M1(.A(A[3:0]),.B(B[7:4]),.R(prod2));
+LM_2 M2(.A(A[7:4]),.B(B[3:0]),.R(prod3));
+LM_1 M3(.A(A[7:4]),.B(B[7:4]),.R(prod4));
 approx_adder adder0(.prod1(prod1),.prod2(prod2),.prod3(prod3),.prod4(prod4),.PROD(R));
 endmodule
