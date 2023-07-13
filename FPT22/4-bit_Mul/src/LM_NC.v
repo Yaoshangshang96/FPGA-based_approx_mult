@@ -1,7 +1,7 @@
 `timescale 1ns / 1ps
 
 
-module LM_NC_2(
+module LM_NC(
 input [3:0] A,
 input [3:0] B,
 
